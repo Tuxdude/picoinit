@@ -1,6 +1,8 @@
 github.com/tuxdude/pico v0.0.0-20220218054717-99e411949890 h1:bQzFQ4NyvodVR7vTqVMtj+ZmK9boORSpvBuDmdeMHik=
 github.com/tuxdude/pico v0.0.0-20220218054717-99e411949890/go.mod h1:UFrtk7KeysvIgKkjt7SelGvuV1h+b1SteTPyc6ZRybU=
+github.com/tuxdude/zzzlog v0.0.0-20220217092946-9139e5a7b9a0 h1:GUgPmcEPt/kkrXI74+4gN2f1k+hhfNtF42HzlUEuFcc=
 github.com/tuxdude/zzzlog v0.0.0-20220217092946-9139e5a7b9a0/go.mod h1:lb9+fY2/8rX51/Svp73mAzCoNei9mQp7wraVVSXQloc=
+github.com/tuxdude/zzzlogi v0.0.0-20220214214109-77ae620b508a/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
 github.com/tuxdude/zzzlogi v0.0.0-20220216081404-c6b4527c5d4e h1:M02v0t0pO4YmlfjB29+fCsAkx5U2sCByHnEMNzfXa0E=
 github.com/tuxdude/zzzlogi v0.0.0-20220216081404-c6b4527c5d4e/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
 golang.org/x/sys v0.0.0-20220209214540-3681064d5158 h1:rm+CHSpPEEW2IsXUib1ThaHIjuBVZjxNgSKmBLFfD4c=
