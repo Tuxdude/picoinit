@@ -39,6 +39,7 @@ GO_CI_LINT_CMD  := golangci-lint
 GOBUILD         := $(GO_CMD) build
 GOSTRIPPEDBUILD := CGO_ENABLED=0 GOOS=linux $(GO_CMD) build -a -ldflags "-s -w" -installsuffix cgo
 GOCLEAN         := $(GO_CMD) clean
+GOGENERATE      := $(GO_CMD) generate
 GOGET           := $(GO_CMD) get -u
 GOLIST          := $(GO_CMD) list
 GOMOD           := $(GO_CMD) mod
@@ -82,7 +83,7 @@ else
     DEP_PKGS := $(addsuffix @master,$(DEP_PKGS))
 endif
 
-all: fiximports fmt lint vet build test
+all: fiximports generate fmt lint vet build test
 
 clean:
 	$(call ExecWithMsg,Cleaning,$(GOCLEAN) ./...)
@@ -92,6 +93,9 @@ fiximports:
 
 fmt:
 	$(call ExecWithMsg,Fixing formatting,$(GOFMT) .)
+
+generate:
+	$(call ExecWithMsg,Generating,$(GOCLEAN) ./...)
 
 lint: tidy
 	$(call ExecWithMsg,Linting,$(GOLINT) . && $(GOLANGCILINT))
@@ -120,5 +124,5 @@ test: tidy
 coverage: tidy
 	$(call ExecWithMsg,Testing with Coverage generation,$(GOCOVERAGE) ./...)
 
-.PHONY: all clean fiximports fmt lint lintagg vet tidy deps_update
+.PHONY: all clean fiximports fmt generate lint lintagg vet tidy deps_update
 .PHONY: build buildstripped test coverage
