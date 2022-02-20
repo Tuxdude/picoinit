@@ -20,7 +20,10 @@ func run() int {
 	}
 	log.Infof("Invocation: %v", inv)
 
-	init, err := pico.NewInit(log, inv.services...)
+	init, err := pico.NewInit(&pico.InitConfig{
+		Log:      log,
+		Services: inv.services,
+	})
 	if err != nil {
 		log.Errorf("Failed to initialize and launch the services, reason: %v", err)
 		return 1
