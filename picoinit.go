@@ -22,6 +22,7 @@ func run() int {
 
 	init, err := pico.NewInit(&pico.InitConfig{
 		Log:      log,
+		PreHook:  inv.preHook,
 		Services: inv.services,
 	})
 	if err != nil {

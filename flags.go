@@ -8,17 +8,22 @@ import (
 )
 
 const (
-	cmdFlag = "--picoinit-cmd"
+	cmdFlag     = "--picoinit-cmd"
+	preHookFlag = "--picoinit-pre-hook"
 )
 
 var (
 	picoInitFlags = map[string]bool{
-		cmdFlag: true,
+		cmdFlag:     true,
+		preHookFlag: true,
 	}
 )
 
 // invocation represents the invocation of picoinit command.
 type invocation struct {
+	// preHook represents the hook to be executed prior to launching the
+	// services.
+	preHook *pico.Hook
 	// services contains the list of services to be launched and managed
 	// by picoinit.
 	services []*pico.Service
@@ -26,7 +31,7 @@ type invocation struct {
 
 // String returns the string representation of the invocation.
 func (i *invocation) String() string {
-	return fmt.Sprintf("{services: %v}", i.services)
+	return fmt.Sprintf("{preHook: %v, services: %v}", i.preHook, i.services)
 }
 
 // argIterator allows iterating over the picoinit command line args and
@@ -106,6 +111,7 @@ func parseWithPicoInitFlags() (*invocation, error) {
 	}
 
 	var services []*pico.Service
+	var preHook *pico.Hook
 
 	for !fi.done() {
 		arg := fi.arg()
@@ -122,12 +128,28 @@ func parseWithPicoInitFlags() (*invocation, error) {
 				Args: cmdArgs[1:],
 			}
 			services = append(services, s)
+		} else if arg == preHookFlag {
+			if preHook != nil {
+				return nil, fmt.Errorf("cannot specify multiple pre-hooks")
+			}
+			cmdArgs, err := fi.captureUntilNextPicoInitFlag()
+			if err != nil {
+				return nil, err
+			}
+			if len(cmdArgs) == 0 {
+				return nil, fmt.Errorf("specified %q without specifying any arguments", preHookFlag)
+			}
+			preHook = &pico.Hook{
+				Cmd:  cmdArgs[0],
+				Args: cmdArgs[1:],
+			}
 		} else {
 			log.Fatalf("Unexpected condition, a picoinit flag we do not handle: %q", arg)
 		}
 	}
 
 	return &invocation{
+		preHook:  preHook,
 		services: services,
 	}, nil
 }
