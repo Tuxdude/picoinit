@@ -33,7 +33,7 @@ func run() int {
 		Services: inv.services,
 	})
 	if err != nil {
-		log.Errorf("Failed to initialize and launch the services, reason: %v", err)
+		log.Errorf("picoinit failed to initialize and launch the services, reason: %v", err)
 		return 1
 	}
 	exitCode := init.Wait()
