@@ -7,11 +7,18 @@ import (
 
 	"github.com/tuxdude/pico"
 	"github.com/tuxdude/zzzlog"
+	"github.com/tuxdude/zzzlogi"
 )
 
 var (
-	log = zzzlog.NewLogger()
+	log = buildLogger()
 )
+
+func buildLogger() zzzlogi.Logger {
+	config := zzzlog.NewConsoleLoggerConfig()
+	config.MaxLevel = zzzlog.LvlWarn
+	return zzzlog.NewLogger(config)
+}
 
 func run() int {
 	inv, err := parseFlags()
