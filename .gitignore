@@ -1,3 +1,4 @@
 .makesystem
-picoinit
+coverage.out
 dist/
+picoinit
