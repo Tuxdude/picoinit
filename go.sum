@@ -1,10 +1,10 @@
 github.com/tuxdude/pico v0.2.2 h1:b6HzvUQCM3oCKxCTHg40539Xp0XfKN8TpgVj66I9XTM=
 github.com/tuxdude/pico v0.2.2/go.mod h1:7Zh4T+1QEzDJqntSoy4rgyEuXut2rsuD+tA8TYUDThk=
-github.com/tuxdude/zzzlog v0.2.3 h1:f9VkS0sJ8LAp9/wjW/qFdM90UJt5ITijphO0ILRerVM=
-github.com/tuxdude/zzzlog v0.2.3/go.mod h1:DHTkiOmpQbt5XtqvHFdD2C9ESd2Nbjd0ecKa941JG5s=
+github.com/tuxdude/zzzlog v0.3.0 h1:HREeOHANV5YEs4NKr7y9iSu37q3ZKcD2CIJp0yc+D0c=
+github.com/tuxdude/zzzlog v0.3.0/go.mod h1:Q04MoIXLrohVY0J1ZkVznQd41u4pzpKwK74su7VWvwc=
 github.com/tuxdude/zzzlogi v0.1.0/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
-github.com/tuxdude/zzzlogi v0.1.1 h1:/YcPkhFzrQlvZR++7v7z42k1l3pgsgMtcrg9QKiEXEU=
-github.com/tuxdude/zzzlogi v0.1.1/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
+github.com/tuxdude/zzzlogi v0.1.2 h1:APwowwCALOA2QpcrSxcBME20gb+RVm3RZvRXH7DjJCE=
+github.com/tuxdude/zzzlogi v0.1.2/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
 golang.org/x/sys v0.20.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
 golang.org/x/sys v0.24.0 h1:Twjiwq9dn6R1fQcyiK+wQyHWfaz/BJB+YIpzU/Cv3Xg=
 golang.org/x/sys v0.24.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
