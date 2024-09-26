@@ -1,7 +1,7 @@
 github.com/tuxdude/pico v0.2.3 h1:Zu+pigDoDcCB3gJMFm8UXh7AHnjCbrqlDoCX9ZVG7jI=
 github.com/tuxdude/pico v0.2.3/go.mod h1:k6Cf0hj3ZaKqeAMRB8lxa5EizVnzrDtEiDjKfgE8+AU=
-github.com/tuxdude/zzzlog v0.3.2 h1:gxf8XtYFJUb14Xge0JUupQcr9G1p3PHOb9kMca/tihA=
-github.com/tuxdude/zzzlog v0.3.2/go.mod h1:oU2FWGnqzT6wyyIeoxAMH9Q6WmEjUKaWR2yxSd7XkNc=
+github.com/tuxdude/zzzlog v0.3.3 h1:fGgN2big58u7O8nR726nZQxlvo549pWC8uHNbamW6Ac=
+github.com/tuxdude/zzzlog v0.3.3/go.mod h1:oU2FWGnqzT6wyyIeoxAMH9Q6WmEjUKaWR2yxSd7XkNc=
 github.com/tuxdude/zzzlogi v0.1.1/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
 github.com/tuxdude/zzzlogi v0.2.0 h1:LcOJNqbRNeRdN5FPGu6J4JcoabKbmhlmMtHwDb6n0x8=
 github.com/tuxdude/zzzlogi v0.2.0/go.mod h1:pDoI7GNJZuYLZtVx4WL7lOQuECECY+XCHF6Sbv7YvzY=
