@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/tuxdude/pico v0.2.3
-	github.com/tuxdude/zzzlog v0.3.3
+	github.com/tuxdude/zzzlog v0.3.4
 	github.com/tuxdude/zzzlogi v0.2.0
 )
 
